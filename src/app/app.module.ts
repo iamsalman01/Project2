@@ -15,6 +15,8 @@ import { WildcardComponent } from './wildcard/wildcard.component';
 import { Home2Component } from './home2/home2.component';
 import { Assignmen10Component } from './assignmen10/assignmen10.component';
 import { Assignment9Component } from './assignment9/assignment9.component';
+
+import { PasswordDirective } from './directives/password.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { Assignment9Component } from './assignment9/assignment9.component';
     WildcardComponent,
     Home2Component,
     Assignmen10Component,
-    Assignment9Component
+    Assignment9Component,
+    
+    PasswordDirective
   ],
   imports: [
     BrowserModule,

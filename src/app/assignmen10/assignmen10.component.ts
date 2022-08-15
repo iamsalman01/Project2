@@ -17,8 +17,8 @@ export class Assignmen10Component implements OnInit {
       'Address' : ['',Validators.required],
       'City' : ['',Validators.required],
       'Phone No' : ['',[Validators.required,Validators.pattern('[0-9]{10,12}')]],
-      'Password' : ['',[Validators.required,Validators.pattern('[a-z0-9]{6,20}')]],
-      'Confirm Password' : ['',[Validators.required,Validators.pattern('[a-z0-9]{6,20}')]],
+      'password' : ['',[Validators.required,Validators.pattern('[a-z0-9]{6,20}')]],
+      'confirmpassword' : ['',[Validators.required,Validators.pattern('[a-z0-9]{6,20}')]],
       'Terms' : [''],
     })
     }
