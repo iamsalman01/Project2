@@ -9,9 +9,7 @@ import { ReactiveFormComponent } from '../reactive-form/reactive-form.component'
 })
 export class Assignmen10Component implements OnInit {
   reactiveform : FormGroup;
-  match : boolean =false;
-  pass : string='';
-  cpass : string = '';
+
   constructor(private build : FormBuilder) { 
     this.reactiveform = build.group({
       'Full Name': ['',Validators.required],
@@ -20,7 +18,7 @@ export class Assignmen10Component implements OnInit {
       'City' : ['',Validators.required],
       'Phone No' : ['',[Validators.required,Validators.pattern('[0-9]{10,12}')]],
       'Password' : ['',[Validators.required,Validators.pattern('[a-z0-9]{6,20}')]],
-      'Confirm Password' : ['',[Validators.required,Validators.pattern('[a-z0-9]{6,20}'),this.compare.bind(this)]],
+      'Confirm Password' : ['',[Validators.required,Validators.pattern('[a-z0-9]{6,20}')]],
       'Terms' : [''],
     })
     }
@@ -28,17 +26,6 @@ export class Assignmen10Component implements OnInit {
 
   ngOnInit(): void {}
 
- compare(control : FormControl)
- 
- {
-if(control.get('Password')?.value== control.get('Confirm Password')?.value)
-{
-return this.match=true
-}
-else
-{
-  return this.match=false
-}
 
 
 
@@ -54,7 +41,7 @@ else
 //   }
 //   return {'Password not match' : false};
   
- }
+ 
   
   getdata(data : any)
   {

@@ -1,15 +1,25 @@
 <h1 style="padding-bottom: 15px;">User Registation using Template driven form</h1>
 <div class="container">
     <form #temform="ngForm" (ngSubmit)="data(temform)">
-    <input type="text" class="form-control mb-3 in" placeholder="Full Name" name="Full name"  [ngModel]="model.fullname" required>
-        <!-- <small class="text-danger" *ngIf="fullname.touched ">Full name is required</small> -->
-    <input type="text" class="form-control mb-3 in" placeholder="Email" name="Email" [ngModel] required>
+    <input type="text" class="form-control mb-3 in" placeholder="Full Name" [ngModel] name="fname" #fname="ngModel" required>
+        <small class="text-danger" *ngIf="fname.invalid && fname.touched ">Full name is required</small>
 
-    <input type="text" class="form-control mb-3 in" placeholder="Phone No" name="Phone No" [ngModel] required>
+    <input type="text" class="form-control mb-3 in" placeholder="Email" name="email" #email="ngModel" [ngModel] required >
+    <small class="text-danger" *ngIf="email.invalid && email.touched ">Email is required</small>
 
-    <input type="password" class="form-control mb-3 in" placeholder="Password" name="Password" [ngModel] required>
 
-    <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" name="Confirm Password" [ngModel]  required>
+    <input type="text" class="form-control mb-3 in" placeholder="Phone No" name="phonen" #phonen="ngModel" [ngModel] required maxlength="12" minlength="10">
+    <small class="text-danger" *ngIf="phonen.invalid && phonen.touched ">Phone no is required</small>
+     <small class="text-danger" *ngIf="phonen.errors && phonen.errors?.['minlength']">Min 10 digit allowed</small>
+   <small class="text-danger" *ngIf="phonen.errors && phonen.errors?.['maxlength']">Max 12 digit allowed</small>
+
+    <input type="password" class="form-control mb-3 in" placeholder="Password" name="pas" #pas="ngModel" [ngModel] required minlength="6">
+    <small class="text-danger" *ngIf="pas.invalid && pas.touched ">Password is required</small>
+    <small class="text-danger" *ngIf="pas.errors && pas.errors?.['minlength'] ">Min 6 digit allowed</small>
+
+    <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" name="cpass" #cpass="ngModel" [ngModel]  required minlength="6">
+    <small class="text-danger" *ngIf="cpass.errors && cpass.errors?.['minlength'] ">Min 6 digit allowed</small>
+    <small class="text-danger" *ngIf="cpass.invalid && cpass.touched ">Confirm password is required <br></small>
 
 
 
