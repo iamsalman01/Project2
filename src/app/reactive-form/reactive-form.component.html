@@ -1,0 +1,13 @@
+<div class="container"><h1 class="h1">Employee Registation Form</h1>
+<form [formGroup]="reactiveform" (ngSubmit)="getdata(reactiveform)">
+    <input type="text" class="form-control mb-3 in" placeholder="Full Name" formControlName="Full Name">
+    <input type="email" class="form-control mb-3 in" placeholder="Email" formControlName="Email">
+    <input type="text" class="form-control mb-3 in" placeholder="Address" formControlName="Address">
+    <input type="text" class="form-control mb-3 in" placeholder="City" formControlName="City">
+    <input type="text" class="form-control mb-3 in" placeholder="Phone No" formControlName="Phone No">
+    <input type="password" class="form-control mb-3 in" placeholder="Password" formControlName="Password">
+    <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" formControlName="Confirm Password">
+    <input type="checkbox"formControlName="Terms"><label>Agree with terms and conditions</label><br>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+</div>

@@ -1,0 +1,15 @@
+.header{
+    background-color: navy;
+    border-radius: 10px;
+    height: 100px;
+    text-align: center;
+}
+.btn{
+    margin-left: 10px;
+}
+input{
+    margin-top: 10px;
+}
+.active{
+    background-color:darkgoldenrod;
+}

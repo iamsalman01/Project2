@@ -1,0 +1,12 @@
+.in{
+    width: 350px;
+}
+label{
+padding-left: 5px;
+padding-bottom:10px;
+
+}
+
+input.ng-invalid.ng-touched{
+    border-color: red;
+}

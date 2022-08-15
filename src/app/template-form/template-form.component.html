@@ -1,0 +1,13 @@
+<h1 style="padding-bottom: 15px;">User Registation using Template driven form</h1>
+<div class="container">
+    <form #temform="ngForm" (ngSubmit)="data(temform)">
+    <input type="text" class="form-control mb-3 in" placeholder="Full Name" name="Full name" [ngModel]>
+    <input type="text" class="form-control mb-3 in" placeholder="Email" name="Email" [ngModel]>
+    <input type="text" class="form-control mb-3 in" placeholder="Phone No" name="Phone No" [ngModel]>
+    <input type="password" class="form-control mb-3 in" placeholder="Password" name="Password" [ngModel]>
+    <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" name="Confirm Password" [ngModel] >
+    <input type="checkbox" [ngModel] name="Terms Agreement"><label>Agree with terms and conditions</label> <br>
+      <button class="btn btn-primary" type="submit">Sign Up</button>
+    
+</form>
+</div>

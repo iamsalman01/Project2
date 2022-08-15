@@ -1,0 +1,33 @@
+
+<div class="container"><h1 class="h1">Employee Registation Form</h1>
+    <form [formGroup]="reactiveform" (ngSubmit)="getdata(reactiveform)">
+        <input type="text" class="form-control mb-3 in" placeholder="Full Name" formControlName="Full Name">
+        <span class="text-danger " *ngIf="control['Full Name'].touched && control['Full Name'].errors?.['required']">Name is required</span>
+
+        <input type="email" class="form-control mb-3 in" placeholder="Email" formControlName="Email">
+        <span class="text-danger" *ngIf="control['Email'].touched && control['Email'].errors?.['required']">Email is required</span>
+        <span class="text-danger" *ngIf="control['Email'].errors?.['pattern']">Enter a valid email</span>
+
+        <input type="text" class="form-control mb-3 in" placeholder="Address" formControlName="Address">
+        <span class="text-danger" *ngIf="control['Address'].touched && control['Address'].errors?.['required']">Address is required</span>
+
+        <input type="text" class="form-control mb-3 in" placeholder="City" formControlName="City">
+        <span class="text-danger" *ngIf="control['City'].touched && control['City'].errors?.['required']">City is required</span>
+
+        <input type="text" class="form-control mb-3 in" placeholder="Phone No" formControlName="Phone No">
+        <span class="text-danger" *ngIf="control['Phone No'].touched && control['Phone No'].errors?.['required']">Phone is required</span>
+        <span class="text-danger" *ngIf="control['Phone No'].errors?.['pattern']">Number should be min 10 and max 12 digit</span>
+
+        <input type="password" class="form-control mb-3 in" placeholder="Password" formControlName="Password">
+        <span class="text-danger" *ngIf="control['Password'].touched && control['Password'].errors?.['required']">Password is required</span>
+        <span class="text-danger" *ngIf="control['Password'].errors?.['pattern']">Password should be min 6 digit</span>
+
+        <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" formControlName="Confirm Password">
+        <span class="text-danger" *ngIf="control['Confirm Password'].touched && control['Confirm Password'].errors?.['required']">Confirm Password is required <br></span>
+        <span class="text-danger" *ngIf="control['Confirm Password'].errors?.['pattern']">Password should be min 6 digit <br></span>
+        <span class="text-danger" *ngIf="control['Confirm Password'].errors?.['compare']" >Password not match</span>
+        <input type="checkbox"formControlName="Terms"><label>Agree with terms and conditions</label><br>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    </div>
+    
