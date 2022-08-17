@@ -12,3 +12,9 @@ label{
 input.ng-invalid.ng-touched{
     border-color: red;
 }
+@media only screen and (max-width : 791px)
+{
+    .in{
+        width: 250px;
+    }
+}

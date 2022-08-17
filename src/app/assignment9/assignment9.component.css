@@ -10,3 +10,9 @@ padding-bottom:10px;
 input.ng-invalid.ng-touched{
     border-color: red;
 }
+@media only screen and (max-width : 479px)
+{
+    .in{
+        width: 250px;
+    }
+}

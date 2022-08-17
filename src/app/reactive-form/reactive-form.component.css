@@ -9,3 +9,9 @@ label{
     padding-bottom: 20px;
     padding-top: 15px;
 }
+@media only screen and (max-width : 619px)
+{
+.in{
+    width: 250px;
+}
+}
