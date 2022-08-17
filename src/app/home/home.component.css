@@ -1,15 +1,25 @@
 .header{
     background-color: navy;
     border-radius: 10px;
-    height: 100px;
+    height: fit-content;
+    width: fit-content;
     text-align: center;
 }
 .btn{
     margin-left: 10px;
+    
+  
 }
 input{
     margin-top: 10px;
+   margin-bottom: 10px;
 }
 .active{
     background-color:darkgoldenrod;
+}
+@media only screen and (max-width : 548px)
+{
+  .header{
+    flex-direction: column;
+  }  
 }

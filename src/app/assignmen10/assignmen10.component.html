@@ -25,7 +25,7 @@
         <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" formControlName="confirmpassword">
         <small class="text-danger" *ngIf="control['confirmpassword'].touched && control['confirmpassword'].errors?.['required']">Confirm Password is required <br></small>
         <small class="text-danger" *ngIf="control['confirmpassword'].errors?.['pattern']">Password should be min 6 digit <br></small>
-        <small class="text-danger" *ngIf="control['confirmpassword'].touched && control['confirmpassword'].errors?.['matchPassword']" >Password not match <br></small>
+        <small class="text-danger" *ngIf=" control['confirmpassword'].touched && control['confirmpassword'].errors?.['matchPassword']" >Password not match <br></small>
         <input type="checkbox"formControlName="Terms"><label>Agree with terms and conditions</label><br>
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
