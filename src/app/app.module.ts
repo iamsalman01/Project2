@@ -16,7 +16,18 @@ import { Home2Component } from './home2/home2.component';
 import { Assignmen10Component } from './assignmen10/assignmen10.component';
 import { Assignment9Component } from './assignment9/assignment9.component';
 
+
 import { PasswordDirective } from './directives/password.directive';
+import { JWTLoginComponent } from './jwt-login/jwt-login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,13 +44,21 @@ import { PasswordDirective } from './directives/password.directive';
     Assignmen10Component,
     Assignment9Component,
     
-    PasswordDirective
+    PasswordDirective,
+         JWTLoginComponent,
+         
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

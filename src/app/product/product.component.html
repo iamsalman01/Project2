@@ -6,7 +6,7 @@
                 <td style="font-weight:bold ;">Price</td>
                 <td></td>
             </tr>
-            <tr>
+            <!-- <tr>
             <td>Nokia 5.1 Plus</td>
             <td>8999</td>
             <td><button class="btn btn-primary">View Details</button></td>
@@ -25,7 +25,12 @@
             <td>Vivo Y2</td>
             <td>9500</td>
             <td><button class="btn btn-primary">View Details</button></td>
-        </tr> 
+        </tr>  -->
+        <tr *ngFor="let product of product">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td><button class="btn btn-primary">View Details</button></td>
+        </tr>
         </thead>
     
     </table>

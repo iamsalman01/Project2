@@ -10,6 +10,9 @@ import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { Assignmen10Component } from './assignmen10/assignmen10.component';
 import { Assignment9Component } from './assignment9/assignment9.component';
+import { JWTLoginComponent } from './jwt-login/jwt-login.component';
+
+
 const routes: Routes = [
   {
     path : 'home',
@@ -30,6 +33,10 @@ const routes: Routes = [
   {
     path : 'assignment10',
     component : Assignmen10Component
+  },
+  {
+    path : 'jwt-login',
+    component : JWTLoginComponent
   },
   
   {
