@@ -1,33 +1,46 @@
-
-<div class="container"><h1 class="h1">Employee Registation Form</h1>
+<div class="container">
+    <h1 class="h1">Employee Registation Form</h1>
     <form [formGroup]="reactiveform" (ngSubmit)="getdata(reactiveform)" appPassword>
         <input type="text" class="form-control mb-3 in" placeholder="Full Name" formControlName="Full Name">
-        <small class="text-danger " *ngIf="control['Full Name'].touched && control['Full Name'].errors?.['required']">Name is required</small>
+        <small class="text-danger "
+            *ngIf="control['Full Name'].touched && control['Full Name'].errors?.['required']">Name is required</small>
 
         <input type="email" class="form-control mb-3 in" placeholder="Email" formControlName="Email">
-        <small class="text-danger" *ngIf="control['Email'].touched && control['Email'].errors?.['required']">Email is required</small>
+        <small class="text-danger" *ngIf="control['Email'].touched && control['Email'].errors?.['required']">Email is
+            required</small>
         <small class="text-danger" *ngIf="control['Email'].errors?.['pattern']">Enter a valid email</small>
 
         <input type="text" class="form-control mb-3 in" placeholder="Address" formControlName="Address">
-        <small class="text-danger" *ngIf="control['Address'].touched && control['Address'].errors?.['required']">Address is required</small>
+        <small class="text-danger" *ngIf="control['Address'].touched && control['Address'].errors?.['required']">Address
+            is required</small>
 
         <input type="text" class="form-control mb-3 in" placeholder="City" formControlName="City">
-        <small class="text-danger" *ngIf="control['City'].touched && control['City'].errors?.['required']">City is required</small>
+        <small class="text-danger" *ngIf="control['City'].touched && control['City'].errors?.['required']">City is
+            required</small>
 
         <input type="text" class="form-control mb-3 in" placeholder="Phone No" formControlName="Phone No">
-        <small class="text-danger" *ngIf="control['Phone No'].touched && control['Phone No'].errors?.['required']">Phone is required</small>
-        <small class="text-danger" *ngIf="control['Phone No'].errors?.['pattern']">Number should be min 10 and max 12 digit</small>
+        <small class="text-danger" *ngIf="control['Phone No'].touched && control['Phone No'].errors?.['required']">Phone
+            is required</small>
+        <small class="text-danger" *ngIf="control['Phone No'].errors?.['pattern']">Number should be min 10 and max 12
+            digit</small>
 
         <input type="password" class="form-control mb-3 in" placeholder="Password" formControlName="password">
-        <small class="text-danger" *ngIf="control['password'].touched && control['password'].errors?.['required']">Password is required</small>
-        <small class="text-danger" *ngIf="control['password'].errors?.['pattern']">Password should be min 6 digit</small>
+        <small class="text-danger"
+            *ngIf="control['password'].touched && control['password'].errors?.['required']">Password is required</small>
+        <small class="text-danger" *ngIf="control['password'].errors?.['pattern']">Password should be min 6
+            digit</small>
 
-        <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" formControlName="confirmpassword">
-        <small class="text-danger" *ngIf="control['confirmpassword'].touched && control['confirmpassword'].errors?.['required']">Confirm Password is required <br></small>
-        <small class="text-danger" *ngIf="control['confirmpassword'].errors?.['pattern']">Password should be min 6 digit <br></small>
-        <small class="text-danger" *ngIf=" control['confirmpassword'].touched && control['confirmpassword'].errors?.['matchPassword']" >Password not match <br></small>
-        <input type="checkbox"formControlName="Terms"><label>Agree with terms and conditions</label><br>
-        <button type="submit" class="btn btn-primary">Register</button>
+        <input type="password" class="form-control mb-3 in" placeholder="Confirm Password"
+            formControlName="confirmpassword">
+        <small class="text-danger"
+            *ngIf="control['confirmpassword'].touched && control['confirmpassword'].errors?.['required']">Confirm
+            Password is required <br></small>
+        <small class="text-danger" *ngIf="control['confirmpassword'].errors?.['pattern']">Password should be min 6 digit
+            <br></small>
+        <small class="text-danger"
+            *ngIf=" control['confirmpassword'].touched && control['confirmpassword'].errors?.['matchPassword']">Password
+            not match <br></small>
+        <input type="checkbox" formControlName="Terms"><label>Agree with terms and conditions</label><br>
+        <button type="submit" class="btn btn-primary" [disabled]="!reactiveform.valid">Register</button>
     </form>
-    </div>
-    
+</div>

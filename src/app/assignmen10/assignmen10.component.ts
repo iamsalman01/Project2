@@ -11,7 +11,7 @@ export class Assignmen10Component implements OnInit {
   reactiveform : FormGroup;
 
   constructor(private build : FormBuilder) { 
-    this.reactiveform = build.group({
+    this.reactiveform = this.build.group({
       'Full Name': ['',Validators.required],
       'Email' : ['',[Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
       'Address' : ['',Validators.required],

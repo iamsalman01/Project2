@@ -1,6 +1,6 @@
 <h1 style="padding-bottom: 15px;">User Registation using Template driven form</h1>
 <div class="container">
-    <form #temform="ngForm" (ngSubmit)="data(temform)">
+    <form #temform="ngForm" (ngSubmit)="data(temform)" appPassword>
     <input type="text" class="form-control mb-3 in" placeholder="Full Name" [ngModel] name="fname" #fname="ngModel" required>
         <small class="text-danger" *ngIf="fname.invalid && fname.touched ">Full name is required</small>
 
@@ -20,11 +20,12 @@
     <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" name="cpass" #cpass="ngModel" [ngModel]  required minlength="6">
     <small class="text-danger" *ngIf="cpass.errors && cpass.errors?.['minlength'] ">Min 6 digit allowed <br></small>
     <small class="text-danger" *ngIf="cpass.invalid && cpass.touched ">Confirm password is required <br></small>
+    <small class="text-danger" *ngIf="cpass.invalid && cpass.errors?.['matchPassword']">Confirm password not match <br></small>
 
 
 
     <input type="checkbox" [ngModel] name="Terms Agreement"><label>Agree with terms and conditions</label> <br>
-      <button class="btn btn-primary" type="submit">Sign Up</button>
+      <button class="btn btn-primary" type="submit" [disabled]="!temform.valid">Sign Up</button>
     
 </form>
 </div>
