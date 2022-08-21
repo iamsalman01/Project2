@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignment9.component.css']
 })
 export class Assignment9Component implements OnInit {
-// model : any={};
+model : any={};
   constructor() { }
 
   ngOnInit(): void {

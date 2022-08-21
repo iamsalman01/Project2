@@ -1,5 +1,6 @@
-<h1 style="padding-bottom: 15px;">User Registation using Template driven form</h1>
+
 <div class="container">
+  <h1 style="padding-bottom: 15px;">User Registation using Template driven form</h1>
     <form #temform="ngForm" (ngSubmit)="data(temform)" appPassword>
     <input type="text" class="form-control mb-3 in" placeholder="Full Name" [ngModel] name="fname" #fname="ngModel" required>
         <small class="text-danger" *ngIf="fname.invalid && fname.touched ">Full name is required</small>

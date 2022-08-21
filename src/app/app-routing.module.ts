@@ -10,6 +10,7 @@ import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { Assignmen10Component } from './assignmen10/assignmen10.component';
 import { Assignment9Component } from './assignment9/assignment9.component';
+import { Assignment3Component } from './assignment3/assignment3.component';
 import { JWTLoginComponent } from './jwt-login/jwt-login.component';
 
 
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path : 'home2',
     component : Home2Component
+  },
+  {
+    path : 'assignment3',
+    component : Assignment3Component,
   },
   {
     path : 'assignment9',
