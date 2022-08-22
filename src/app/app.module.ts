@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { Assignment3Component } from './assignment3/assignment3.component';
 import { ColorDirective } from './directives/color.directive';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 
@@ -47,6 +48,7 @@ import { ColorDirective } from './directives/color.directive';
          JWTLoginComponent,
          Assignment3Component,
          ColorDirective,
+         ProductDetailsComponent,
   ], 
            imports: [
     BrowserModule,

@@ -4,8 +4,7 @@ import { Directive ,ElementRef, HostListener, HostBinding, Renderer2, Input} fro
   selector: '[appColor]'
 })
 export class ColorDirective {
-// @Input() defaultColor! : string;
-// @HostBinding('style.background') backgroundColor! : string
+
   constructor(private ele : ElementRef, private render : Renderer2) { }
 ngOnInit()
 {}

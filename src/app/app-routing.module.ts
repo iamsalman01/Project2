@@ -12,7 +12,7 @@ import { Assignmen10Component } from './assignmen10/assignmen10.component';
 import { Assignment9Component } from './assignment9/assignment9.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
 import { JWTLoginComponent } from './jwt-login/jwt-login.component';
-
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -61,6 +61,10 @@ const routes: Routes = [
   {
     path : 'product',
     component : ProductComponent
+  },
+  {
+    path : 'product/:id',
+    component : ProductDetailsComponent
   },
   {
    path : 'contact',

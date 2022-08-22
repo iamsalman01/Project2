@@ -26,10 +26,10 @@
             <td>9500</td>
             <td><button class="btn btn-primary">View Details</button></td>
         </tr>  -->
-        <tr *ngFor="let product of product">
-            <td>{{product.name}}</td>
-            <td>{{product.price}}</td>
-            <td><button class="btn btn-primary">View Details</button></td>
+        <tr *ngFor="let products of products">
+            <td>{{products.name}}</td>
+            <td>{{products.price | currency : "INR"}}</td>
+            <td><button class="btn btn-primary" routerLink="/product/{{products.id}}" >View Details</button></td>
         </tr>
         </thead>
     
