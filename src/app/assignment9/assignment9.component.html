@@ -14,14 +14,14 @@
      <small class="text-danger" *ngIf="phonen.errors && phonen.errors?.['minlength']">Min 10 digit allowed</small>
    <small class="text-danger" *ngIf="phonen.errors && phonen.errors?.['maxlength']">Max 12 digit allowed</small>
 
-    <input type="password" class="form-control mb-3 in" placeholder="Password" name="pas" #pas="ngModel" [ngModel] required minlength="6">
+    <input type="password" class="form-control mb-3 in" placeholder="Password" name="password" #pas="ngModel" [ngModel] required minlength="6">
     <small class="text-danger" *ngIf="pas.invalid && pas.touched ">Password is required</small>
     <small class="text-danger" *ngIf="pas.errors && pas.errors?.['minlength'] ">Min 6 digit allowed</small>
 
-    <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" name="cpass" #cpass="ngModel" [ngModel]  required minlength="6">
+    <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" name="confirmpassword" #cpass="ngModel" [ngModel]  required minlength="6">
     <small class="text-danger" *ngIf="cpass.errors && cpass.errors?.['minlength'] ">Min 6 digit allowed <br></small>
-    <small class="text-danger" *ngIf="cpass.invalid && cpass.touched ">Confirm password is required <br></small>
-    <small class="text-danger" *ngIf="cpass.invalid && cpass.errors?.['matchPassword']">Confirm password not match <br></small>
+    <small class="text-danger" *ngIf="cpass.errors?.['required'] && cpass.touched ">Confirm password is required <br></small>
+    <small class="text-danger" *ngIf="cpass.invalid && cpass.errors?.['matchPassword'] && !cpass.errors?.['required']">Confirm password not match <br></small>
 
 
 
