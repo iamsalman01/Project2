@@ -1,5 +1,6 @@
 
 <div class="container">
+  <!-- Created by Salman -->
   <h1 style="padding-bottom: 15px;">User Registation using Template driven form</h1>
     <form #temform="ngForm" (ngSubmit)="data(temform)" appPassword>
     <input type="text" class="form-control mb-3 in" placeholder="Full Name" [ngModel] name="fname" #fname="ngModel" required>
@@ -15,7 +16,7 @@
    <small class="text-danger" *ngIf="phonen.errors && phonen.errors?.['maxlength']">Max 12 digit allowed</small>
 
     <input type="password" class="form-control mb-3 in" placeholder="Password" name="password" #pas="ngModel" [ngModel] required minlength="6">
-    <small class="text-danger" *ngIf="pas.invalid && pas.touched ">Password is required</small>
+    <small class="text-danger" *ngIf=" pas.invalid && pas.touched && pas.errors?.['required'] ">Password is required</small>
     <small class="text-danger" *ngIf="pas.errors && pas.errors?.['minlength'] ">Min 6 digit allowed</small>
 
     <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" name="confirmpassword" #cpass="ngModel" [ngModel]  required minlength="6">
