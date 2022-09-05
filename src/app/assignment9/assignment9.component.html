@@ -3,30 +3,30 @@
   <!-- Created by Salman -->
   <h1 style="padding-bottom: 15px;">User Registation using Template driven form</h1>
     <form #temform="ngForm" (ngSubmit)="data(temform)" appPassword>
-    <input type="text" class="form-control mb-3 in" placeholder="Full Name" [ngModel] name="fname" #fname="ngModel" required>
+    <input type="text" class="form-control mt-3 in" placeholder="Full Name" [ngModel] name="fname" #fname="ngModel" required>
         <small class="text-danger" *ngIf="fname.invalid && fname.touched ">Full name is required</small>
 
-    <input type="text" class="form-control mb-3 in" placeholder="Email" name="email" #email="ngModel" [ngModel] required >
+    <input type="text" class="form-control mt-3 in" placeholder="Email" name="email" #email="ngModel" [ngModel] required >
     <small class="text-danger" *ngIf="email.invalid && email.touched ">Email is required</small>
 
 
-    <input type="text" class="form-control mb-3 in" placeholder="Phone No" name="phonen" #phonen="ngModel" [ngModel] required maxlength="12" minlength="10">
+    <input type="text" class="form-control mt-3 in" placeholder="Phone No" name="phonen" #phonen="ngModel" [ngModel] required maxlength="12" minlength="10">
     <small class="text-danger" *ngIf="phonen.invalid && phonen.touched ">Phone no is required</small>
      <small class="text-danger" *ngIf="phonen.errors && phonen.errors?.['minlength']">Min 10 digit allowed</small>
    <small class="text-danger" *ngIf="phonen.errors && phonen.errors?.['maxlength']">Max 12 digit allowed</small>
 
-    <input type="password" class="form-control mb-3 in" placeholder="Password" name="password" #pas="ngModel" [ngModel] required minlength="6">
+    <input type="password" class="form-control mt-3 in" placeholder="Password" name="password" #pas="ngModel" [ngModel] required minlength="6">
     <small class="text-danger" *ngIf=" pas.invalid && pas.touched && pas.errors?.['required'] ">Password is required</small>
     <small class="text-danger" *ngIf="pas.errors && pas.errors?.['minlength'] ">Min 6 digit allowed</small>
 
-    <input type="password" class="form-control mb-3 in" placeholder="Confirm Password" name="confirmpassword" #cpass="ngModel" [ngModel]  required minlength="6">
+    <input type="password" class="form-control mt-3 in" placeholder="Confirm Password" name="confirmpassword" #cpass="ngModel" [ngModel]  required minlength="6">
     <small class="text-danger" *ngIf="cpass.errors && cpass.errors?.['minlength'] ">Min 6 digit allowed <br></small>
     <small class="text-danger" *ngIf="cpass.errors?.['required'] && cpass.touched">Confirm password is required <br></small>
     <small class="text-danger" *ngIf="cpass.touched && cpass.invalid && cpass.errors?.['matchPassword'] && !cpass.errors?.['required']">Confirm password not match <br></small>
 
 
 
-    <input type="checkbox" [ngModel] name="Terms Agreement"><label>Agree with terms and conditions</label> <br>
+    <input class="mt-2" type="checkbox" [ngModel] name="Terms Agreement"><label>Agree with terms and conditions?</label> <br>
       <button class="btn btn-primary" type="submit" [disabled]="!temform.valid">Sign Up</button>
     
 </form>
